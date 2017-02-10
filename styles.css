@@ -1,0 +1,97 @@
+body {
+    background-color: #ccc;
+    font-family: Arial, "Times New Roman", sans-serif;
+}
+
+
+
+div.parent {
+    width: 90%;
+    border: 1px solid #000;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+div.parent div.videoPlayer {
+
+}
+
+div.videoPlayer h1 {
+    margin: 5px 0;
+    text-align: center;
+}
+
+div.videoPlayer video#video {
+    background-color: #ccc;
+    width: 100% !important;
+    height: auto !important; /* matches video height to video width at a 1:1 ratio */
+    object-fit: inherit; /* ensures that poster will stretch to cover video */
+}
+
+
+div.videoPlayer progress {
+    width: 100%
+}
+
+div.videoPlayer div.videoControls {
+    text-align: center;
+    background-color: #ccc;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.videoControls span {
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+
+div.parent div.relatedVids {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.relatedVids a.video {
+    width: 32%;
+    /*border: 1px solid #000;*/
+    margin: 5px;
+    min-width: 250px !important;
+    align-items: stretch;
+    flex-grow: 1;
+    cursor: pointer;
+}
+div.relatedVids a.video:first-child {
+    margin-left: 0;
+}
+div.relatedVids a.video:last-child {
+    margin-right: 0;
+}
+
+div.relatedVids a.video img {
+    width: 100%;
+}
+
+div.relatedVids a.video p.title {
+    color: #666;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    margin: 4px 0 2px;
+}
+
+div.relatedVids a.video p.desc {
+    font-size: 8px;
+    margin: 0 0 3px 0;
+}
+
+
+
+@media screen and (min-width: 100px) and (max-width: 500px) {
+    div.relatedVids a.video {
+        width: 100%;
+    }
+}
